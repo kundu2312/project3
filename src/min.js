@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
 
-    // Optional icon toggle
+    
     menuBtn.innerHTML = mobileMenu.classList.contains("hidden")
       ? "☰"
       : "✕";
@@ -36,7 +36,7 @@ function toggleFaq(button) {
   });
 
 
-  const slider = document.getElementById("heroSlider");
+  /*const slider = document.getElementById("heroSlider");
   const prevDot = document.getElementById("prevDot");
   const nextDot = document.getElementById("nextDot");
 
@@ -82,7 +82,36 @@ function toggleFaq(button) {
 
   // Init
   updateSlider();
-  startAutoSlide();
+  startAutoSlide();*/ 
+  document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.getElementById("heroSlider");
+  const dots = document.querySelectorAll(".hero-dot");
+  let index = 0;
+  const total = dots.length;
+
+  function updateSlider() {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("bg-lime-400", i === index);
+      dot.classList.toggle("bg-gray-500", i !== index);
+    });
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      index = i;
+      updateSlider();
+    });
+  });
+
+  // AUTO SLIDE (optional)
+  setInterval(() => {
+    index = (index + 1) % total;
+    updateSlider();
+  }, 6000);
+});
+
+
 
 
   
