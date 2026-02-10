@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/** {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.container {
+  max-width: 1200px;
+}*/ 
+@theme{
+  --color-yellow:#FFFF00; 
+} 
+
+
+/* ---------------------------
+   GLOBAL FONT (FIGMA MATCH)
+---------------------------- */
+@layer base {
+  body {
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+}
+
+/* ---------------------------
+   HERO BACKGROUND TEXTURE
+---------------------------- */
+.hero-bg {
+  background:
+    radial-gradient(circle at top left, rgba(132, 204, 22, 0.15), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(132, 204, 22, 0.08), transparent 50%),
+    #0b1320;
+}
+
+/* ---------------------------
+   MARQUEE ANIMATION
+---------------------------- */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 18s linear infinite;
+}
+
+/* ---------------------------
+   OPTIONAL BADGE ROTATION
+---------------------------- */
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotate-slow {
+  animation: rotateSlow 20s linear infinite;
+}
+
+.classes-bg {
+  background:
+    radial-gradient(60% 60% at 50% 0%, rgba(215,251,0,0.08), transparent 60%),
+    linear-gradient(180deg, #0B1220 0%, #0E1627 100%);
+}
+/* Optional */
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  transition: all 0.3s ease;
+}
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+  .trainer-card {
+    background: linear-gradient(135deg, #84cc16, #22c55e);
+    border-radius: 16px;
+    height: 320px;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .trainer-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(132, 204, 22, 0.35);
+  }
+

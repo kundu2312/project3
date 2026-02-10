@@ -1,0 +1,23 @@
+1. Install node and check version node -v , npm -v
+2. npm init -y
+3. npm install tailwindcss @tailwindcss/cli
+4. make a source folder and css file. In css file import t5ailwind by @import "tailwindcss";
+5. Write the build command:  "build":"tailwindcss -i ./src/style.css -o ./output/style.css --watch" 
+6. npm run build
+7. .link the output file in the html file
+
+if there is no node_modules, but you need for building the project again, then install again by by: 
+npm install
+
+Utilities are the atomic CSS classes Tailwind provides for styling elements directly in your markup. Each utility class maps to a single CSS property-value pair (or a small, focused set). 
+Variants are conditional modifiers that apply a utility only under certain states or conditions, such as hover, focus, responsive breakpoints, dark mode, etc. 
+Variants are conditional modifiers that apply a utility only under certain states or conditions, such as hover, focus, responsive breakpoints, dark mode, etc.
+
+
+
+Utilities define what style to apply. Variants define when to apply it.
+
+
+
+
+Applies a specific style (eg: text-red-500, p-2) Variant Applies a utility conditionally (eg: hover:text-red-700, md:p-4)

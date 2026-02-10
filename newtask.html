@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4H4c+Z9+qGk5t9UJ0Z+0Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./output/style.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+
+  <header class="bg-[#0b1320] text-white fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- LOGO -->
+        <a href="/" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full border-2 border-lime-400 flex items-center justify-center">
+            <img src="./images/logo.png" alt="logo img">
+          </div>
+          <div>
+            <h1 class="text-lg font-bold leading-none">STAYFIT</h1>
+            <p class="text-[10px] text-gray-400 tracking-widest">
+              ULTIMATE GYM CENTRE
+            </p>
+          </div>
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+
+          <a href="newtask.html" class="text-lime-400">Home</a>
+          <a href="about.html" class="hover:text-lime-400">About Us</a>
+          <a href="service.html" class="hover:text-lime-400">Services</a>
+
+          <!-- CLASSES DROPDOWN -->
+          <div class="relative group">
+            <a href="classes.html" class="flex items-center gap-1 hover:text-lime-400">
+              Classes <span class="text-xs">▾</span>
+            </a>
+            <div class="absolute left-0 top-10 w-44 bg-[#0b1320] border border-gray-700 rounded-md
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+              <a href="class.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                classes
+              </a>
+              <a href="classdetailes.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                classdetailes
+              </a>
+
+            </div>
+          </div>
+
+          <!-- TRAINERS DROPDOWN -->
+          <div class="relative group">
+            <a href="trainer.html" class="flex items-center gap-1 hover:text-lime-400">
+              Trainers <span class="text-xs">▾</span>
+            </a>
+            <div class="absolute left-0 top-10 w-44 bg-[#0b1320] border border-gray-700 rounded-md
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+              <a href="trainer.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                Our Trainers
+              </a>
+              <a href="/trainers/group.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                Our Trainers Detailes
+              </a>
+            </div>
+          </div>
+
+          <!-- BLOG DROPDOWN -->
+          <div class="relative group">
+            <a href="/blog.html" class="flex items-center gap-1 hover:text-lime-400">
+              Blog <span class="text-xs">▾</span>
+            </a>
+            <div class="absolute left-0 top-10 w-40 bg-[#0b1320] border border-gray-700 rounded-md
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+              <a href="/blog/fitness.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                Fitness
+              </a>
+              <a href="/blog/nutrition.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                Nutrition
+              </a>
+            </div>
+          </div>
+
+          <a href="/contact.html" class="hover:text-lime-400">Contact</a>
+        </nav>
+
+        <!-- RIGHT ACTIONS -->
+        <div class="hidden lg:flex items-center gap-4">
+
+          <!-- SEARCH -->
+          <a href="search.html" class="hover:text-lime-400">🔍</a>
+
+          <!-- CART -->
+          <a href="cart.html" class="hover:text-lime-400">🛒</a>
+
+          <!-- CTA -->
+          <a href="/join.html"
+            class="bg-lime-400 text-black px-5 py-2 text-sm font-semibold hover:bg-lime-300 transition">
+            JOIN CLASS NOW
+          </a>
+        </div>
+
+        <!-- MOBILE TOGGLE -->
+        <button id="menuBtn" class="lg:hidden text-2xl">
+          ☰
+        </button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="hidden bg-[#0b1320] border-t border-gray-700">
+      <nav class="flex flex-col p-6 gap-4 text-sm">
+
+        <a href="newtask.html" class="text-lime-400">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="service.html">Services</a>
+
+        <!-- MOBILE DROPDOWNS (STACKED) -->
+        <details>
+          <summary class="cursor-pointer">Classes</summary>
+          <div class="ml-4 mt-2 flex flex-col gap-2">
+            <a href="class.html">classes</a>
+            <a href="classdetailes.html">classdetailes</a>
+
+          </div>
+        </details>
+
+        <details>
+          <summary class="cursor-pointer">Trainers</summary>
+          <div class="ml-4 mt-2 flex flex-col gap-2">
+            <a href="trainer.html">Trainers</a>
+            <a href="/trainers/group.html">Detailes</a>
+          </div>
+        </details>
+
+        <details>
+          <summary class="cursor-pointer">Blog</summary>
+          <div class="ml-4 mt-2 flex flex-col gap-2">
+            <a href="/blog/fitness.html">Fitness</a>
+            <a href="/blog/nutrition.html">Nutrition</a>
+          </div>
+        </details>
+
+        <a href="/contact.html">Contact</a>
+          <a href="search.html" class="hover:text-lime-400">🔍</a>
+
+                    <!-- CART -->
+                    <a href="cart.html" class="hover:text-lime-400">🛒</a>
+        <a href="/join.html" class="mt-4 bg-lime-400 text-black text-center py-2 font-semibold">
+          JOIN CLASS NOW
+        </a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- HERO SECTION -->
+    <!--<section class="hero-bg overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 py-24">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-14">
+
+          
+          <div class="text-white">
+
+            <h1 class="text-4xl lg:text-5xl font-bold leading-tight tracking-wide">
+              YOUR BODY CAN
+              <span class="text-lime-400">STAND</span><br />
+              <span class="text-lime-400">ALMOST</span> ANYTHING.
+            </h1>
+
+            <p class="mt-6 max-w-lg text-gray-400 text-sm leading-7 border-l-4 border-lime-400 pl-4">
+              It’s your mind that needs convincing. Push past your limits, stay
+              committed, and watch your body transform into a powerhouse of
+              strength and resilience.
+            </p>
+
+           
+            <div class="flex gap-12 mt-8">
+              <div>
+                <h3 class="text-lime-400 text-xl font-bold">1,200+</h3>
+                <p class="text-sm text-gray-400">Active Members</p>
+              </div>
+              <div>
+                <h3 class="text-lime-400 text-xl font-bold">12+</h3>
+                <p class="text-sm text-gray-400">Certified Trainers</p>
+              </div>
+              <div>
+                <h3 class="text-lime-400 text-xl font-bold">20+</h3>
+                <p class="text-sm text-gray-400">Year of Experience</p>
+              </div>
+            </div>
+
+           
+            <div class="flex gap-4 mt-10">
+              <a class="bg-lime-400 text-black px-7 py-3 font-semibold text-sm hover:bg-lime-300 transition">
+                Get Started
+              </a>
+              <a
+                class="border border-lime-400 text-lime-400 px-7 py-3 font-semibold text-sm hover:bg-lime-400 hover:text-black transition">
+                Explore More
+              </a>
+            </div>
+          </div>
+
+         
+          <div class="relative flex justify-center">
+
+            
+            <div class="absolute top-6 right-6 rotate-slow">
+              <div
+                class="w-24 h-24 rounded-full border-2 border-lime-400 flex items-center justify-center text-[10px] font-semibold text-lime-400 text-center">
+                EXERCISE<br>WORKOUT<br>GYM
+              </div>
+            </div>
+
+            <img src="./images/hero.png" alt="Fitness Trainer" class="max-w-sm lg:max-w-md" />
+          </div>
+
+        </div>
+      </div>-->
+    <section class="hero-bg overflow-hidden relative">
+
+      <!-- SLIDES CONTAINER -->
+      <div id="heroSlider" class="flex transition-transform duration-700 ease-in-out">
+
+        <!-- SLIDE 1 -->
+        <div class="min-w-full">
+          <!-- YOUR BANNER -->
+          <div class="max-w-7xl mx-auto px-6 py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-14">
+
+              <div class="text-white">
+                <h1 class="text-4xl lg:text-5xl font-bold leading-tight tracking-wide">
+                  YOUR BODY CAN
+                  <span class="text-lime-400">STAND</span><br />
+                  <span class="text-lime-400">ALMOST</span> ANYTHING.
+                </h1>
+
+                <p class="mt-6 max-w-lg text-gray-400 text-sm leading-7 border-l-4 border-lime-400 pl-4">
+                  It’s your mind that needs convincing. Push past your limits, stay committed, and watch your body
+                  transform into a powerhouse of strength and resilience.
+                </p>
+
+                <div class="flex gap-12 mt-8">
+                  <div>
+                    <h3 class="text-lime-400 text-xl font-bold">1,200+</h3>
+                    <p class="text-sm text-gray-400">Active Members</p>
+                  </div>
+                  <div>
+                    <h3 class="text-lime-400 text-xl font-bold">12+</h3>
+                    <p class="text-sm text-gray-400">Certified Trainers</p>
+                  </div>
+                  <div>
+                    <h3 class="text-lime-400 text-xl font-bold">20+</h3>
+                    <p class="text-sm text-gray-400">Year of Experience</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4 mt-10">
+                  <a class="bg-lime-400 text-black px-7 py-3 font-semibold text-sm hover:bg-lime-300 transition">
+                    Get Started
+                  </a>
+                  <a
+                    class="border border-lime-400 text-lime-400 px-7 py-3 font-semibold text-sm hover:bg-lime-400 hover:text-black transition">
+                    Explore More
+                  </a>
+                </div>
+                <div class="flex items-center gap-2 mt-6">
+                  <button id="prevDot" class="w-6 h-1.5 rounded-sm bg-gray-500"></button>
+                  <div id="activeDot" class="w-6 h-1.5 rounded-sm bg-lime-400"></div>
+                  <button id="nextDot" class="w-6 h-1.5 rounded-sm bg-gray-500"></button>
+                </div>
+              </div>
+
+              <div class="relative flex justify-center">
+                <div class="absolute top-6 right-6 rotate-slow">
+                  <div
+                    class="w-24 h-24 rounded-full border-2 border-lime-400 flex items-center justify-center text-[10px] font-semibold text-lime-400 text-center">
+                    EXERCISE<br>WORKOUT<br>GYM
+                  </div>
+                </div>
+                <img src="./images/hero.png" class="max-w-sm lg:max-w-md" />
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 (SAME CONTENT) -->
+        <div class="min-w-full">
+          <div class="max-w-7xl mx-auto px-6 py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-14">
+              <!-- SAME CONTENT -->
+              <div class="text-white">
+                <h1 class="text-4xl lg:text-5xl font-bold leading-tight tracking-wide">
+                  YOUR BODY CAN
+                  <span class="text-lime-400">STAND</span><br />
+                  <span class="text-lime-400">ALMOST</span> ANYTHING.
+                </h1>
+                <p class="mt-6 max-w-lg text-gray-400 text-sm leading-7 border-l-4 border-lime-400 pl-4">
+                  It’s your mind that needs convincing. Push past your limits, stay committed, and watch your body
+                  transform into a powerhouse of strength and resilience.
+                </p>
+              </div>
+              <img src="./images/hero.png" class="max-w-sm lg:max-w-md mx-auto" />
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 (SAME CONTENT) -->
+        <div class="min-w-full">
+          <div class="max-w-7xl mx-auto px-6 py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-14">
+              <div class="text-white">
+                <h1 class="text-4xl lg:text-5xl font-bold leading-tight tracking-wide">
+                  YOUR BODY CAN
+                  <span class="text-lime-400">STAND</span><br />
+                  <span class="text-lime-400">ALMOST</span> ANYTHING.
+                </h1>
+                <p class="mt-6 max-w-lg text-gray-400 text-sm leading-7 border-l-4 border-lime-400 pl-4">
+                  It’s your mind that needs convincing. Push past your limits, stay committed, and watch your body
+                  transform into a powerhouse of strength and resilience.
+                </p>
+              </div>
+              <img src="./images/hero.png" class="max-w-sm lg:max-w-md mx-auto" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONTROLS -->
+
+
+      <!-- MOVING STRIP -->
+      <div class="bg-lime-400 py-3 overflow-hidden">
+        <p class="animate-marquee whitespace-nowrap text-black text-sm font-semibold">
+          LIVE CLASSES + PERSONAL TRAINERS + OUTDOOR & ONLINE TRAINERS + PERSONAL TRAINING +
+          LIVE CLASSES + PERSONAL TRAINERS +
+        </p>
+      </div>
+    </section>
+    <!-- ABOUT US SECTION -->
+    <section class="relative bg-[#0b1324] py-28 overflow-hidden">
+      <!-- BIG BACKGROUND ABOUT TEXT -->
+      <h6 class="absolute top-24 right-24 text-[140px] font-extrabold tracking-widest
+           text-white/5 uppercase select-none pointer-events-none">
+        ABOUT US
+      </h6>
+
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+
+        <!-- IMAGE COLLAGE -->
+        <div class="relative h-[520px]">
+          <!-- Image 1 -->
+          <img src="./images/about.png"
+            class="absolute top-0 left-0 w-[220px] h-[260px] object-cover rounded-xl shadow-lg" alt="about img" />
+
+          <!-- Image 2 -->
+          <img src="./images/about2.png"
+            class="absolute top-12 right-0 w-[220px] h-[260px] object-cover rounded-xl shadow-lg" alt="about2 img" />
+
+          <!-- Image 3 -->
+          <img src="./images/about3.png"
+            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] h-[360px] object-cover rounded-xl shadow-2xl"
+            alt="about3 img" />
+
+          <!-- DUMBBELL ICON -->
+          <img src="./images/dumblerolate.png" class="absolute bottom-28 left-10 w-16 rotate-[-20deg]" alt="dumblerolate img" />
+        </div>
+
+        <!-- TEXT CONTENT -->
+        <div>
+          <!-- Small label -->
+          <div class="flex items-center gap-3 text-lime-400 font-semibold mb-4">
+            <span class="inline-block w-8 h-[2px] bg-lime-400"></span>
+            About Us
+          </div>
+
+          <h3 class="text-4xl font-extrabold text-white leading-tight mb-6">
+            EMPOWERING YOU TO ACHIEVE <br />
+            <span class="text-lime-400">YOUR FITNESS GOALS</span>
+          </h3>
+
+          <p class="text-gray-400 mb-8 max-w-xl">
+            We believe fitness is more than just a workout—it’s a lifestyle.
+            With top-of-the-line facilities, certified trainers, and a supportive
+            community, we’re here to inspire and guide you every step of the way.
+          </p>
+
+          <!-- FEATURES -->
+          <div class="grid sm:grid-cols-2 gap-6 mb-10">
+            <div>
+              <h4 class="text-lime-400 font-semibold mb-2">↗ Personal Trainer</h4>
+              <p class="text-gray-400 text-sm">
+                Achieve your fitness goals with expert guidance.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-lime-400 font-semibold mb-2">↗ Cardio Programs</h4>
+              <p class="text-gray-400 text-sm">
+                From steady-state runs to intense intervals.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-lime-400 font-semibold mb-2">↗ Quality Equipment</h4>
+              <p class="text-gray-400 text-sm">
+                Latest cardio & strength machines.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-lime-400 font-semibold mb-2">↗ Healthy Nutrition</h4>
+              <p class="text-gray-400 text-sm">
+                Custom meal plans for your body.
+              </p>
+            </div>
+          </div>
+
+          <a href="#"
+            class="inline-block bg-lime-400 text-black font-semibold px-8 py-3 rounded-md hover:bg-lime-500 transition">
+            More About Us
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="classes-bg">
+      <div class="max-w-[1920px] mx-auto px-[150px] py-[150px]">
+
+
+        <div class="text-center mb-[60px]">
+          <div class="flex items-center justify-center gap-2 text-lime-400 text-sm font-semibold mb-4">
+            <svg width="18" height="10" viewBox="0 0 18 10" fill="none">
+              <path d="M1 5h16" stroke="#D7FB00" stroke-width="2" />
+            </svg>
+            Fitness Class
+          </div>
+
+          <h2 class="text-[42px] font-extrabold text-white leading-[1.2]">
+            TRANSFORM YOUR BODY WITH OUR<br>
+            <span class="text-lime-400">DYNAMIC FITNESS</span> CLASSES
+          </h2>
+        </div>
+
+
+        <div class="flex flex-col items-center gap-[20px]">
+
+
+          <div class="w-[1110px] h-[82px] flex items-center justify-between
+                  rounded-full px-[40px]
+                  bg-gradient-to-r from-[#0F172A] to-[#0E1627]
+                  border border-white/10">
+            <span class="text-white text-[18px] font-semibold">
+              Strength Training
+            </span>
+            <span class="w-[44px] h-[44px] rounded-full bg-lime-400
+                     flex items-center justify-center text-black text-xl font-bold">
+              ↗
+            </span>
+          </div>
+
+          <div class="w-[1110px] h-[82px] flex items-center justify-between
+                  rounded-full px-[40px]
+                  bg-gradient-to-r from-[#0F172A] to-[#0E1627]
+                  border border-white/10">
+            <span class="text-white text-[18px] font-semibold">
+              Personal Training
+            </span>
+            <span class="w-[44px] h-[44px] rounded-full bg-lime-400
+                     flex items-center justify-center text-black text-xl font-bold">
+              ↗
+            </span>
+          </div>
+
+          <div class="w-[1110px] h-[82px] flex items-center justify-between
+                  rounded-full px-[40px]
+                  bg-gradient-to-r from-[#0F172A] to-[#0E1627]
+                  border border-white/10">
+            <span class="text-white text-[18px] font-semibold">
+              Nutrition Training
+            </span>
+            <span class="w-[44px] h-[44px] rounded-full bg-lime-400
+                     flex items-center justify-center text-black text-xl font-bold">
+              ↗
+            </span>
+          </div>
+
+          <div class="w-[1110px] h-[82px] flex items-center justify-between
+                  rounded-full px-[40px]
+                  bg-gradient-to-r from-[#0F172A] to-[#0E1627]
+                  border border-white/10">
+            <span class="text-white text-[18px] font-semibold">
+              Group Workout
+            </span>
+            <span class="w-[44px] h-[44px] rounded-full bg-lime-400
+                     flex items-center justify-center text-black text-xl font-bold">
+              ↗
+            </span>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="flex justify-center mt-[50px]">
+          <button class="bg-lime-400 text-black px-[28px] py-[10px]
+                     text-sm font-semibold rounded">
+            Explore More
+          </button>
+        </div>
+
+      </div>
+    </section>
+    <section class="relative bg-[#0B1220] py-28 overflow-hidden">
+      <div class="max-w-[1200px] mx-auto px-6">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          <!-- LEFT CONTENT -->
+          <div>
+            <!-- Label -->
+            <div class="flex items-center gap-2 text-lime-400 text-sm font-semibold mb-4">
+              <span class="w-8 h-[2px] bg-lime-400"></span>
+              Why Choose Us
+            </div>
+
+            <!-- Heading -->
+            <h2 class="text-white text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+              ELEVATE FITNESS WITH THE
+              <span class="text-lime-400"> BEST WAY </span>
+              POSSIBLE
+            </h2>
+
+            <!-- Description -->
+            <p class="text-gray-300 max-w-xl mb-10 leading-relaxed">
+              We offer a fitness journey that’s tailored to your goals, supported by
+              professional trainers and a welcoming community. Whether it’s weight loss,
+              strength building, or overall wellness, our proven methods deliver results.
+            </p>
+
+            <!-- Features -->
+            <div class="space-y-8">
+
+              <!-- Item -->
+              <div class="flex gap-6">
+                <div class="text-lime-400 font-bold text-lg">01</div>
+                <div>
+                  <h4 class="text-white font-semibold mb-1">
+                    Personalized Fitness Plans
+                  </h4>
+                  <p class="text-gray-400 text-sm leading-relaxed">
+                    Tailored workouts based on your unique goals and fitness level.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="flex gap-6">
+                <div class="text-lime-400 font-bold text-lg">02</div>
+                <div>
+                  <h4 class="text-white font-semibold mb-1">
+                    Results-driven Focus
+                  </h4>
+                  <p class="text-gray-400 text-sm leading-relaxed">
+                    Every program is designed to achieve measurable and sustainable results.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="flex gap-6">
+                <div class="text-lime-400 font-bold text-lg">03</div>
+                <div>
+                  <h4 class="text-white font-semibold mb-1">
+                    State-of-the-art Equipment
+                  </h4>
+                  <p class="text-gray-400 text-sm leading-relaxed">
+                    Latest machines and tools for strength, cardio, and endurance training.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RIGHT IMAGES -->
+          <div class="grid grid-cols-2 gap-6">
+            <img src="./images/choseus.png" class="rounded-2xl object-cover w-full h-full" alt="" />
+            <img src="./images/choseus2.png" class="rounded-2xl object-cover w-full h-full" alt="" />
+            <img src="./images/choseus3.png" class="rounded-2xl object-cover w-full h-full" alt="" />
+            <img src="./images/choseus4.png" class="rounded-2xl object-cover w-full h-full" alt="" />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- subtle glow -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(215,248,0,0.08),transparent_60%)] pointer-events-none">
+      </div>
+    </section>
+    <section class="relative bg-[#0B1220] py-28">
+      <div class="max-w-[1200px] mx-auto px-6">
+
+        <!-- Section Header -->
+        <div class="text-center mb-20">
+          <p
+            class="flex justify-center items-center gap-2 text-lime-400 text-sm font-semibold uppercase tracking-widest">
+            <span class="w-6 h-[2px] bg-lime-400"></span>
+            Pricing Plan
+          </p>
+
+          <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+            TRANSFORM YOUR BODY WITH OUR <br />
+            <span class="text-lime-400">DYNAMIC FITNESS CLASSES</span>
+          </h2>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- Weekly Plan -->
+          <div class="relative bg-[#0E1626] rounded-2xl p-8 border border-white/10">
+            <h3 class="text-white text-lg font-semibold mb-4">Weekly Pass</h3>
+            <!-- Vertical Badge (Weekly – Right Side) -->
+            <span class="absolute -right-5 top-10 rotate-90 bg-lime-400 text-black text-xs font-bold px-4 py-1 rounded">
+              MOST POPULAR
+            </span>
+
+            <p class="text-lime-400 text-4xl font-extrabold">
+              $99 <span class="text-sm font-medium text-white/60">/ week</span>
+            </p>
+
+            <ul class="mt-6 space-y-4 text-sm text-white/80">
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> Fitness Floor & Cardio</li>
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> 30-Minute Consultation</li>
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> Club 360 Class</li>
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> 50% Off Guest Passes</li>
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> Staffed Hours Only</li>
+            </ul>
+
+            <button
+              class="mt-8 w-full bg-lime-400 text-black font-semibold py-3 rounded-lg hover:bg-lime-500 transition">
+              Get Membership
+            </button>
+          </div>
+
+          <!-- Monthly Plan (Most Popular) -->
+          <div class="relative bg-[#0E1626] rounded-2xl p-8 border border-lime-400 scale-[1.02]">
+
+
+
+            <h3 class="text-white text-lg font-semibold mb-4">Monthly Pass</h3>
+
+            <p class="text-lime-400 text-4xl font-extrabold">
+              $299 <span class="text-sm font-medium text-white/60">/ month</span>
+            </p>
+
+            <ul class="mt-6 space-y-4 text-sm text-white/80">
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> Fitness Floor & Cardio</li>
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> 30-Minute Consultation</li>
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> Club 360 Class</li>
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> 50% Off Guest Passes</li>
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> Staffed Hours Only</li>
+            </ul>
+
+            <button
+              class="mt-8 w-full bg-lime-400 text-black font-semibold py-3 rounded-lg hover:bg-lime-500 transition">
+              Get Membership
+            </button>
+          </div>
+
+          <!-- Yearly Plan -->
+          <div class="relative bg-[#0E1626] rounded-2xl p-8 border border-white/10">
+            <h3 class="text-white text-lg font-semibold mb-4">Yearly Pass</h3>
+
+            <p class="text-lime-400 text-4xl font-extrabold">
+              $999 <span class="text-sm font-medium text-white/60">/ year</span>
+            </p>
+
+            <ul class="mt-6 space-y-4 text-sm text-white/80">
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> Fitness Floor & Cardio</li>
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> 30-Minute Consultation</li>
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> Club 360 Class</li>
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> 50% Off Guest Passes</li>
+              <li class="flex gap-3"><span class="text-lime-400">➜</span> Staffed Hours Only</li>
+            </ul>
+
+            <button
+              class="mt-8 w-full bg-lime-400 text-black font-semibold py-3 rounded-lg hover:bg-lime-500 transition">
+              Get Membership
+            </button>
+          </div>
+        </div>
+
+        <!-- Bottom Features -->
+        <div class="mt-16 flex flex-wrap justify-center gap-10 text-sm text-white/70">
+          <div class="flex items-center gap-3"> <img src="./images/calender.png" alt="" class="w-4 h-4" />
+            <span>Get 30 day free trial</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="./images/dollar.png" alt="" class="w-4 h-4" />
+            <span>No hidden fees pay</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="./images/clock.png" alt="" class="w-4 h-4" />
+            <span>Cancel anytime</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OUR TRAINERS SECTION -->
+    <section class="relative bg-[#0B1220] py-28 overflow-hidden">
+      <div class="max-w-[1200px] mx-auto px-6">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center gap-2 text-lime-400 text-sm font-medium mb-3">
+            <span class="w-6 h-[2px] bg-lime-400"></span>
+            Our Trainers
+          </div>
+
+          <h2 class="text-3xl md:text-4xl font-bold text-white leading-tight">
+            YOUR FITNESS JOURNEY STARTS <br />
+            WITH OUR <span class="text-lime-400">EXPERT TRAINERS</span>
+          </h2>
+        </div>
+
+        <!-- Trainers Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 place-items-center">
+          <!-- Trainer Card -->
+          <div class="group">
+            <div
+              class="w-[170px] h-[220px] rounded-2xl overflow-hidden bg-[#EDEDED] transition-transform duration-300 group-hover:-translate-y-2">
+              <img src="./images/trainer.png" alt="Trainer"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition" />
+            </div>
+          </div>
+
+          <div class="group">
+            <div
+              class="w-[170px] h-[220px] rounded-2xl overflow-hidden bg-[#EDEDED] transition-transform duration-300 group-hover:-translate-y-2">
+              <img src="./images/trainer2.png" alt="Trainer"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition" />
+            </div>
+          </div>
+
+          <div class="group">
+            <div
+              class="w-[170px] h-[220px] rounded-2xl overflow-hidden bg-[#EDEDED] transition-transform duration-300 group-hover:-translate-y-2">
+              <img src="./images/trainer3.png" alt="Trainer"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition" />
+            </div>
+          </div>
+
+          <div class="group">
+            <div
+              class="w-[170px] h-[220px] rounded-2xl overflow-hidden bg-[#EDEDED] transition-transform duration-300 group-hover:-translate-y-2">
+              <img src="./images/trainer4.png" alt="Trainer"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition" />
+            </div>
+          </div>
+
+          <div class="group">
+            <div
+              class="w-[170px] h-[220px] rounded-2xl overflow-hidden bg-[#EDEDED] transition-transform duration-300 group-hover:-translate-y-2">
+              <img src="./images/trainer5.png" alt="Trainer"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative bg-[#0B1220] py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+          <!-- LEFT IMAGE STACK -->
+          <div class="relative flex justify-center lg:justify-start">
+            <!-- Lime vertical bar -->
+            <span class="absolute left-0 top-10 h-40 w-2 bg-lime-400 rounded-full"></span>
+
+            <!-- Main image -->
+            <img src="./images/substract.png" alt="Fitness Trainer"
+              class="rounded-2xl w-[360px] object-cover relative z-10" />
+
+            <!-- Small overlay image -->
+            <img src="./images/sunstract1.png" alt="Workout Session"
+              class="absolute -bottom-12 left-24 w-[260px] rounded-2xl border border-white/10" />
+          </div>
+
+          <!-- RIGHT FAQ CONTENT -->
+          <div>
+            <!-- Section label -->
+            <div class="flex items-center gap-2 text-lime-400 text-sm font-semibold mb-4">
+              <span class="w-6 h-[2px] bg-lime-400"></span>
+              Frequently Asked Questions
+            </div>
+
+            <!-- Heading -->
+            <h2 class="text-3xl lg:text-4xl font-bold text-white leading-tight mb-10">
+              ANSWER TO YOUR <span class="text-lime-400">MOST</span><br />
+              COMMON QUESTIONS
+            </h2>
+
+            <!-- FAQ ITEMS -->
+            <div class="space-y-4">
+
+              <!-- ACTIVE -->
+              <div class="border border-lime-400 rounded-xl bg-lime-400 text-black">
+                <button class="w-full flex justify-between items-center px-6 py-4 font-semibold text-left"
+                  onclick="toggleFaq(this)">
+                  WHAT TYPES OF FITNESS CLASSES DO YOU OFFER?
+                  <span class="text-xl">−</span>
+                </button>
+                <div class="px-6 pb-4 text-sm">
+                  We offer a wide variety of fitness classes including HIIT, Yoga,
+                  Spin, Strength training, cardio, and more.
+                </div>
+              </div>
+
+              <!-- ITEM -->
+              <div class="border border-white/10 rounded-xl">
+                <button class="w-full flex justify-between items-center px-6 py-4 text-white font-medium text-left"
+                  onclick="toggleFaq(this)">
+                  DO I NEED TO BE A MEMBER TO ATTEND A CLASS?
+                  <span class="text-xl">+</span>
+                </button>
+                <div class="hidden px-6 pb-4 text-sm text-white/70">
+                  Membership is recommended, but trial classes are available for
+                  new users.
+                </div>
+              </div>
+
+              <div class="border border-white/10 rounded-xl">
+                <button class="w-full flex justify-between items-center px-6 py-4 text-white font-medium text-left"
+                  onclick="toggleFaq(this)">
+                  WHAT IS YOUR CANCELLATION POLICY FOR CLASSES?
+                  <span class="text-xl">+</span>
+                </button>
+                <div class="hidden px-6 pb-4 text-sm text-white/70">
+                  You can cancel classes up to 24 hours in advance without any fee.
+                </div>
+              </div>
+
+              <div class="border border-white/10 rounded-xl">
+                <button class="w-full flex justify-between items-center px-6 py-4 text-white font-medium text-left"
+                  onclick="toggleFaq(this)">
+                  WHAT SHOULD I BRING TO MY FIRST WORKOUT?
+                  <span class="text-xl">+</span>
+                </button>
+                <div class="hidden px-6 pb-4 text-sm text-white/70">
+                  Comfortable clothing, water bottle, towel, and positive energy.
+                </div>
+              </div>
+
+              <div class="border border-white/10 rounded-xl">
+                <button class="w-full flex justify-between items-center px-6 py-4 text-white font-medium text-left"
+                  onclick="toggleFaq(this)">
+                  DO YOU HAVE ANY SPECIAL OFFERS FOR NEW MEMBERS?
+                  <span class="text-xl">+</span>
+                </button>
+                <div class="hidden px-6 pb-4 text-sm text-white/70">
+                  Yes, we offer free trials and discounted starter plans.
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative bg-[#0B1220] py-28 overflow-hidden">
+      <div class="max-w-[1200px] mx-auto px-6">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-20">
+          <div class="flex items-center justify-center gap-2 text-lime-400 text-sm font-semibold mb-4">
+            <span class="w-6 h-[2px] bg-lime-400"></span>
+            Client Testimonials
+            <span class="w-6 h-[2px] bg-lime-400"></span>
+          </div>
+
+          <h2 class="text-4xl lg:text-5xl font-extrabold text-white uppercase tracking-wide">
+            Inspiring Journeys:
+            <span class="text-lime-400">Client Testimonials</span>
+          </h2>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <!-- Card 1 -->
+          <div class="bg-[#4A5A00] rounded-2xl p-8 text-center shadow-lg">
+            <h4 class="text-white font-semibold text-lg mb-3">
+              Cameron Williamson
+            </h4>
+
+            <div class="flex justify-center gap-1 text-yellow-400 mb-4">
+              ★ ★ ★ ★ ★
+            </div>
+
+            <p class="text-white/80 text-sm leading-relaxed">
+              “The fitness community is amazing. I have seen significant improvements in my
+              strength and overall fitness.”
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-[#4A5A00] rounded-2xl p-8 text-center shadow-lg">
+            <h4 class="text-white font-semibold text-lg mb-3">
+              Savannah Alexander
+            </h4>
+
+            <div class="flex justify-center gap-1 text-yellow-400 mb-4">
+              ★ ★ ★ ★ ★
+            </div>
+
+            <p class="text-white/80 text-sm leading-relaxed">
+              “I was new to fitness, but they made me feel right at home.
+              Every class is challenging and fun.”
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-[#4A5A00] rounded-2xl p-8 text-center shadow-lg">
+            <h4 class="text-white font-semibold text-lg mb-3">
+              Cameron Greenlewis
+            </h4>
+
+            <div class="flex justify-center gap-1 text-yellow-400 mb-4">
+              ★ ★ ★ ★ ★
+            </div>
+
+            <p class="text-white/80 text-sm leading-relaxed">
+              “The trainers are knowledgeable and supportive.
+              I have seen real improvements in my fitness.”
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-[#4A5A00] rounded-2xl p-8 text-center shadow-lg">
+            <h4 class="text-white font-semibold text-lg mb-3">
+              Darlene Robertson
+            </h4>
+
+            <div class="flex justify-center gap-1 text-yellow-400 mb-4">
+              ★ ★ ★ ★ ★
+            </div>
+
+            <p class="text-white/80 text-sm leading-relaxed">
+              “The fitness community is amazing.
+              I have seen dramatic improvement in my strength.”
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Decorative dotted background (optional) -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#3a4a0033_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none">
+      </div>
+    </section>
+
+    <section class="relative bg-gradient-to-br from-[#0b1220] via-[#0f172a] to-[#020617] py-28">
+      <div class="max-w-[1400px] mx-auto px-6">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-16">
+          <p class="text-lime-400 text-sm font-semibold tracking-wide flex items-center justify-center gap-2">
+            <span class="w-2 h-2 bg-lime-400 rounded-full"></span>
+            Latest Post
+          </p>
+
+          <h2 class="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold text-white uppercase">
+            Stay Informed With <span class="text-lime-400">Our Latest</span><br />
+            Articles
+          </h2>
+        </div>
+
+        <!-- Blog Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+
+          <!-- Card 1 -->
+          <div class="group relative rounded-xl border-2 border-lime-400 overflow-hidden">
+            <img src="./images/blog1.png" alt="Jasmine Light"
+              class="w-full h-[320px] object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-x-0 bottom-0 bg-black/70 py-3 text-center">
+              <p class="text-white font-semibold">Jasmine Light</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="group relative rounded-xl border-2 border-lime-400 overflow-hidden">
+            <img src="./images/blog2.png" alt="Marco Gregor"
+              class="w-full h-[320px] object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-x-0 bottom-0 bg-black/70 py-3 text-center">
+              <p class="text-white font-semibold">Marco Gregor</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="group relative rounded-xl border-2 border-lime-400 overflow-hidden">
+            <img src="./images/blog3.png" alt="Cintya Blanc"
+              class="w-full h-[320px] object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-x-0 bottom-0 bg-black/70 py-3 text-center">
+              <p class="text-white font-semibold">Cintya Blanc</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="group relative rounded-xl border-2 border-lime-400 overflow-hidden">
+            <img src="./images/blog4.png" alt="Anderson Joy"
+              class="w-full h-[320px] object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-x-0 bottom-0 bg-black/70 py-3 text-center">
+              <p class="text-white font-semibold">Anderson Joy</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="group relative rounded-xl border-2 border-lime-400 overflow-hidden">
+            <img src="./images/blog5.png" alt="Ana Jordan"
+              class="w-full h-[320px] object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-x-0 bottom-0 bg-black/70 py-3 text-center">
+              <p class="text-white font-semibold">Ana Jordan</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="relative w-full bg-[#171E2E] overflow-hidden">
+      <!-- Background Gradient -->
+      <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-black/40"></div>
+
+      <div class="relative max-w-[1320px] mx-auto px-6 lg:px-0 py-28">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          <!-- LEFT : FORM -->
+          <div class="max-w-xl">
+            <div class="flex items-center gap-2 text-lime-400 text-sm font-semibold mb-4">
+              <span class="h-[2px] w-6 bg-lime-400"></span>
+              Track Your Fitness Goals
+            </div>
+
+            <h2 class="text-white text-3xl font-bold mb-8">
+              Calculate Your Fitness Level
+            </h2>
+
+            <form class="space-y-5">
+              <input type="number" placeholder="Height / cm"
+                class="w-full bg-transparent border border-white/20 rounded-md px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-lime-400" />
+
+              <input type="number" placeholder="Weight / kg"
+                class="w-full bg-transparent border border-white/20 rounded-md px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-lime-400" />
+
+              <select
+                class="w-full bg-transparent border border-white/20 rounded-md px-4 py-3 text-white focus:outline-none focus:border-lime-400">
+                <option class="bg-[#171E2E]">Select Gender</option>
+                <option class="bg-[#171E2E]">Male</option>
+                <option class="bg-[#171E2E]">Female</option>
+              </select>
+
+              <select
+                class="w-full bg-transparent border border-white/20 rounded-md px-4 py-3 text-white focus:outline-none focus:border-lime-400">
+                <option class="bg-[#171E2E]">Select Activity Level</option>
+                <option class="bg-[#171E2E]">Beginner</option>
+                <option class="bg-[#171E2E]">Intermediate</option>
+                <option class="bg-[#171E2E]">Advanced</option>
+              </select>
+
+              <button type="button" class="mt-4 bg-lime-400 text-black font-semibold px-8 py-3 rounded-md hover:bg-lime-500 transition">
+                CALCULATE BMI
+              </button>
+            </form>
+          </div>
+
+          <!-- RIGHT : IMAGE -->
+          <div class="relative flex justify-center lg:justify-end">
+            <!-- Accent Bar -->
+            <span class="absolute left-0 top-16 h-32 w-2 bg-lime-400 rounded-full"></span>
+
+            <!--<img
+          src=""
+          alt="Fitness Trainer"
+          class="max-w-sm lg:max-w-md rounded-xl shadow-xl"
+        />-->
+          </div>
+        </div>
+
+        <!-- SECTION TITLE BOTTOM -->
+        <div class="absolute left-1/2 -bottom-8 -translate-x-1/2">
+          <h3 class="text-white text-xl font-semibold tracking-wide">
+            KNOW YOUR <span class="text-lime-400">FITNESS LEVEL</span>
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative w-full bg-center bg-cover" style="background-image: url('./images/members.png');">
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0f172a]/95 via-[#0f172a]/85 to-[#0f172a]/95"></div>
+
+      <!-- Content -->
+      <div class="relative max-w-7xl mx-auto px-6 py-28">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+          <!-- Left Visual Space (empty – image already in background like Figma) -->
+          <div class="hidden lg:block"></div>
+
+          <!-- Right Content -->
+          <div class="text-white max-w-xl">
+            <h4 class="text-lime-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              Membership Offer
+            </h4>
+
+            <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+              Get <span class="text-lime-400">30% OFF</span> In <br />
+              <span class="text-white">StayFit</span>
+            </h2>
+
+            <ul class="space-y-4 text-white/80 mb-8">
+              <li class="flex items-start gap-3">
+                <span class="text-lime-400 mt-1">✔</span>
+                Unlimited access to all gym facilities
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-lime-400 mt-1">✔</span>
+                Book a personal training session
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-lime-400 mt-1">✔</span>
+                Experience the best fitness programs
+              </li>
+            </ul>
+
+            <a href="#"
+              class="inline-flex items-center justify-center bg-lime-400 text-black font-bold px-8 py-4 rounded-md hover:bg-lime-300 transition">
+              Get Membership
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Moving Strip -->
+      <div class="bg-lime-400 py-3 overflow-hidden">
+        <p class="animate-marquee whitespace-nowrap text-black text-sm font-semibold">
+          LIVE CLASSES + PERSONAL TRAINERS + OUTDOOR & ONLINE TRAINERS + PERSONAL TRAINING +
+          LIVE CLASSES + PERSONAL TRAINERS +
+        </p>
+      </div>
+    </section>
+
+  </main>
+  <footer class="relative bg-[#0E1525] text-white">
+    <!-- Background overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0E1525]/95 via-[#0E1525]/90 to-[#0E1525]/80"></div>
+
+    <div class="relative max-w-[1400px] mx-auto px-6 lg:px-20 py-20">
+      <div class="grid gap-12 lg:grid-cols-4 md:grid-cols-2">
+
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full border-2 border-lime-400 flex items-center justify-center">
+              <img src="./images/logo.png" alt="logo img">
+            </div>
+            <h3 class="text-xl font-bold">STAYFIT</h3>
+          </div>
+
+          <p class="text-white/70 text-sm leading-relaxed mb-4">
+            Push harder, go further. Your fitness journey starts today!
+          </p>
+
+          <div class="flex items-center gap-3">
+            <input type="email" placeholder="Enter your email"
+              class="bg-transparent border-b border-white/30 focus:border-lime-400 outline-none text-sm py-1 w-full" />
+            <span class="text-lime-400 text-lg">→</span>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold mb-5">CONTACT US</h4>
+
+          <ul class="space-y-4 text-sm text-white/70">
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-lime-400"></i>
+              +91 123 456 789
+            </li>
+
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-lime-400"></i>
+              stayfit@gmail.com
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- Timing -->
+        <div>
+          <h4 class="font-semibold mb-5">OUR GYM TIMING</h4>
+
+          <ul class="space-y-4 text-sm text-white/70">
+            <li>
+              <span class="block font-medium text-white">Mon - Fri</span>
+              08:00 AM - 10:00 PM
+            </li>
+            <li>
+              <span class="block font-medium text-white">Sat - Sun</span>
+              08:00 AM - 09:00 PM
+            </li>
+          </ul>
+        </div>
+
+        <!-- Location & Social -->
+        <div>
+          <h4 class="font-semibold mb-5">OUR LOCATION</h4>
+
+          <p class="flex items-start gap-3 text-sm text-white/70">
+            <i class="fa-solid fa-location-dot text-lime-400 mt-1"></i>
+            123 Stayfit Street, Tokyo, Japan
+          </p>
+
+
+          <h4 class="font-semibold mb-4">FOLLOW US</h4>
+
+          <div class="flex gap-5 text-white/70">
+            <a href="#" class="hover:text-lime-400 transition">
+              <i class="fa-brands fa-facebook-f text-lg"></i>
+            </a>
+
+            <a href="#" class="hover:text-lime-400 transition">
+              <i class="fa-brands fa-instagram text-lg"></i>
+            </a>
+
+            <a href="#" class="hover:text-lime-400 transition">
+              <i class="fa-brands fa-x-twitter text-lg"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-white/10 mt-16 pt-6 text-left text-sm text-white/50">
+        © 2025 All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+  <script src="./src/style.js"></script>
+  <!--<script src="./js/min.js"></script>--> 
+  </body>
+
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes</title> 
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./output/style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header class="bg-[#0b1320] text-white fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- LOGO -->
+                <a href="/" class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full border-2 border-lime-400 flex items-center justify-center">
+                        <img src="./images/logo.png" alt="logo img">
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold leading-none">STAYFIT</h1>
+                        <p class="text-[10px] text-gray-400 tracking-widest">
+                            ULTIMATE GYM CENTRE
+                        </p>
+                    </div>
+                </a>
+
+                <!-- DESKTOP MENU -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+
+                    <a href="newtask.html" class="hover:text-lime-400">Home</a>
+                    <a href="about.html" class="hover:text-lime-400">About Us</a>
+                    <a href="service.html" class="hover:text-lime-400">Services</a>
+
+                    <!-- CLASSES DROPDOWN -->
+                    <div class="relative group">
+                        <a href="#" class="flex items-center text-lime-400">
+                            Classes <span class="text-xs">▾</span>
+                        </a>
+                        <div class="absolute left-0 top-10 w-44 bg-[#0b1320] border border-gray-700 rounded-md
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+                            <a href="class.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                                classes
+                            </a>
+                            <a href="classdetailes.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                                classdetailes
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- TRAINERS DROPDOWN -->
+                    <div class="relative group">
+                        <a href="trainers.html" class="flex items-center gap-1 hover:text-lime-400">
+                            Trainers <span class="text-xs">▾</span>
+                        </a>
+                        <div class="absolute left-0 top-10 w-44 bg-[#0b1320] border border-gray-700 rounded-md
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+                            <a href="trainer.html"
+                                class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                                Our Trainers
+                            </a>
+                            <a href="/trainers/group.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                               Our Trainers Detailes
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- BLOG DROPDOWN -->
+                    <div class="relative group">
+                        <a href="/blog.html" class="flex items-center gap-1 hover:text-lime-400">
+                            Blog <span class="text-xs">▾</span>
+                        </a>
+                        <div class="absolute left-0 top-10 w-40 bg-[#0b1320] border border-gray-700 rounded-md
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+                            <a href="/blog/fitness.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                                Fitness
+                            </a>
+                            <a href="/blog/nutrition.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                                Nutrition
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="/contact.html" class="hover:text-lime-400">Contact</a>
+                </nav>
+
+                <!-- RIGHT ACTIONS -->
+                <div class="hidden lg:flex items-center gap-4">
+
+                    <!-- SEARCH -->
+                    <a href="search.html" class="hover:text-lime-400">🔍</a>
+
+                    <!-- CART -->
+                    <a href="cart.html" class="hover:text-lime-400">🛒</a>
+
+                    <!-- CTA -->
+                    <a href="/join.html"
+                        class="bg-lime-400 text-black px-5 py-2 text-sm font-semibold hover:bg-lime-300 transition">
+                        JOIN CLASS NOW
+                    </a>
+                </div>
+
+                <!-- MOBILE TOGGLE -->
+                <button id="menuBtn" class="lg:hidden text-2xl">
+                    ☰
+                </button>
+
+            </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-[#0b1320] border-t border-gray-700">
+            <nav class="flex flex-col p-6 gap-4 text-sm">
+
+                <a href="newtask.html" class="text-lime-400">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Services</a>
+
+                <!-- MOBILE DROPDOWNS (STACKED) -->
+                <details>
+                    <summary class="cursor-pointer">Classes</summary>
+                    <div class="ml-4 mt-2 flex flex-col gap-2">
+                        <a href="class.html">classes</a>
+                        <a href="classdetailes.html">classdetailes</a>
+
+                    </div>
+                </details>
+
+                <details>
+                    <summary class="cursor-pointer">Trainers</summary>
+                    <div class="ml-4 mt-2 flex flex-col gap-2">
+                        <a href="trainer.html">Trainers</a>
+                        <a href="/trainers/group.html">Detailes</a>
+                    </div>
+                </details>
+
+                <details>
+                    <summary class="cursor-pointer">Blog</summary>
+                    <div class="ml-4 mt-2 flex flex-col gap-2">
+                        <a href="/blog/fitness.html">Fitness</a>
+                        <a href="/blog/nutrition.html">Nutrition</a>
+                    </div>
+                </details>
+
+                <a href="/contact.html">Contact</a>
+                 <a href="search.html" class="hover:text-lime-400">🔍</a>
+
+                    <!-- CART -->
+                    <a href="cart.html" class="hover:text-lime-400">🛒</a>
+                <a href="/join.html" class="mt-4 bg-lime-400 text-black text-center py-2 font-semibold">
+                    JOIN CLASS NOW
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="relative h-[500px] flex items-center justify-center text-center text-white"
+            style="background-image:url('./images/herosection.png'); background-size:cover; background-position:center;">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-blue/70"></div>
+
+            <!-- Content -->
+            <div class="relative z-10 max-w-3xl px-6">
+                <h1 class="text-4xl lg:text-5xl font-extrabold">
+                    OUR <span class="text-lime-400">CLASSES</span>
+                </h1>
+
+                <p class="mt-4 text-sm text-white/70">
+                    Home - <span class="text-lime-400">Classes</span>
+                </p>
+            </div>
+        </section>
+        <!-- MOVING STRIP -->
+        <div class="bg-lime-400 py-3 overflow-hidden">
+            <p class="animate-marquee whitespace-nowrap text-black text-sm font-semibold">
+                LIVE CLASSES + PERSONAL TRAINERS + OUTDOOR & ONLINE TRAINERS + PERSONAL TRAINING +
+                LIVE CLASSES + PERSONAL TRAINERS +
+            </p>
+        </div>
+        </section>
+
+        <section class="relative bg-[#0b1320] py-20">
+            <div class="max-w-7xl mx-auto px-6 lg:px-20">
+
+                <!-- Section Heading -->
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-white">
+                        CLASSES THAT FIT YOUR <span class="text-lime-400">LIFESTYLE</span>
+                    </h2>
+                    <p class="mt-3 text-sm text-white/60">
+                        Choose from a range of classes tailored to your schedule and fitness goals.
+                    </p>
+                </div>
+
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Card -->
+                    <a href="#"
+                        class="group relative h-[260px] rounded-xl overflow-hidden border border-lime-400/20 hover:border-lime-400 transition">
+                        <img src="./images/class1.png" alt="class1 img" class="absolute inset-0 w-full h-full object-cover" />
+
+                        <!---
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-white font-semibold text-lg">
+                                Yoga & Pilates
+                            </h3>
+                            <p class="text-xs text-white/70 mt-1">
+                                Improve flexibility, balance, and mental focus.
+                            </p>
+                        </div>-->
+                    </a>
+
+                    <!-- Card -->
+                    <a href="#"
+                        class="group relative h-[260px] rounded-xl overflow-hidden border border-lime-400/20 hover:border-lime-400 transition">
+                        <img src="./images/class2.png" alt="class2 img" class="absolute inset-0 w-full h-full object-cover" />
+                    </a>
+                        <!-- Card -->
+                    <a href="#"
+                        class="group relative h-[260px] rounded-xl overflow-hidden border border-lime-400/20 hover:border-lime-400 transition">
+                        <img src="./images/class3.png" alt="class3 img" class="absolute inset-0 w-full h-full object-cover" />
+                     </a>
+                       
+                    <!-- Card -->
+                    <a href="#"
+                        class="group relative h-[260px] rounded-xl overflow-hidden border border-lime-400/20 hover:border-lime-400 transition">
+                        <img src="./images/class4.png" alt="class4 img"
+                            class="absolute inset-0 w-full h-full object-cover" />
+                     </a>
+                    <!-- Card -->
+                    <a href="#"
+                        class="group relative h-[260px] rounded-xl overflow-hidden border border-lime-400/20 hover:border-lime-400 transition">
+                        <img src="./images/class5.png" alt="class5 img"
+                            class="absolute inset-0 w-full h-full object-cover" />
+
+                        </a>
+                     <!-- Card -->
+                    <a href="#"
+                        class="group relative h-[260px] rounded-xl overflow-hidden border border-lime-400/20 hover:border-lime-400 transition">
+                        <img src="./images/class6.png" alt="class6 img" class="absolute inset-0 w-full h-full object-cover" />
+                                    </a> 
+                     <!-- Card -->
+                    <a href="#"
+                        class="group relative h-[260px] rounded-xl overflow-hidden border border-lime-400/20 hover:border-lime-400 transition">
+                        <img src="./images/class7.png" alt="class7 img" class="absolute inset-0 w-full h-full object-cover" /> 
+                        </a> 
+                        <!-- Card -->
+                    <a href="#"
+                        class="group relative h-[260px] rounded-xl overflow-hidden border border-lime-400/20 hover:border-lime-400 transition">
+                        <img src="./images/class8.png" alt="class8 img" class="absolute inset-0 w-full h-full object-cover" /> 
+                        </a> 
+                        <!-- Card -->
+                    <a href="#"
+                        class="group relative h-[260px] rounded-xl overflow-hidden border border-lime-400/20 hover:border-lime-400 transition">
+                        <img src="./images/class9.png" alt="class9 img" class="absolute inset-0 w-full h-full object-cover" /> 
+                        </a>
+
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="relative bg-[#0E1525] text-white">
+        <!-- Background overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#0E1525]/95 via-[#0E1525]/90 to-[#0E1525]/80"></div>
+
+        <div class="relative max-w-[1400px] mx-auto px-6 lg:px-20 py-20">
+            <div class="grid gap-12 lg:grid-cols-4 md:grid-cols-2">
+
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full border-2 border-lime-400 flex items-center justify-center">
+                            <img src="./images/logo.png" alt="logo img">
+                        </div>
+                        <h3 class="text-xl font-bold">STAYFIT</h3>
+                    </div>
+
+                    <p class="text-white/70 text-sm leading-relaxed mb-4">
+                        Push harder, go further. Your fitness journey starts today!
+                    </p>
+
+                    <div class="flex items-center gap-3">
+                        <input type="email" placeholder="Enter your email"
+                            class="bg-transparent border-b border-white/30 focus:border-lime-400 outline-none text-sm py-1 w-full" />
+                        <span class="text-lime-400 text-lg">→</span>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-semibold mb-5">CONTACT US</h4>
+
+                    <ul class="space-y-4 text-sm text-white/70">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-lime-400"></i>
+                            +91 123 456 789
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-lime-400"></i>
+                            stayfit@gmail.com
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- Timing -->
+                <div>
+                    <h4 class="font-semibold mb-5">OUR GYM TIMING</h4>
+
+                    <ul class="space-y-4 text-sm text-white/70">
+                        <li>
+                            <span class="block font-medium text-white">Mon - Fri</span>
+                            08:00 AM - 10:00 PM
+                        </li>
+                        <li>
+                            <span class="block font-medium text-white">Sat - Sun</span>
+                            08:00 AM - 09:00 PM
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Location & Social -->
+                <div>
+                    <h4 class="font-semibold mb-5">OUR LOCATION</h4>
+
+                    <p class="flex items-start gap-3 text-sm text-white/70">
+                        <i class="fa-solid fa-location-dot text-lime-400 mt-1"></i>
+                        123 Stayfit Street, Tokyo, Japan
+                    </p>
+
+
+                    <h4 class="font-semibold mb-4">FOLLOW US</h4>
+
+                    <div class="flex gap-5 text-white/70">
+                        <a href="#" class="hover:text-lime-400 transition">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                        </a>
+
+                        <a href="#" class="hover:text-lime-400 transition">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+
+                        <a href="#" class="hover:text-lime-400 transition">
+                            <i class="fa-brands fa-x-twitter text-lg"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-white/10 mt-16 pt-6 text-left text-sm text-white/50">
+                © 2025 All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="./src/min.js"></script>
+</body>
+
+</html>

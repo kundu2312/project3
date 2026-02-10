@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classdetailes</title> 
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./output/style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header class="bg-[#0b1320] text-white fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- LOGO -->
+                <a href="/" class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full border-2 border-lime-400 flex items-center justify-center">
+                        <img src="./images/logo.png" alt="logo img">
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold leading-none">STAYFIT</h1>
+                        <p class="text-[10px] text-gray-400 tracking-widest">
+                            ULTIMATE GYM CENTRE
+                        </p>
+                    </div>
+                </a>
+
+                <!-- DESKTOP MENU -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+
+                    <a href="newtask.html" class="hover:text-lime-400">Home</a>
+                    <a href="about.html" class="hover:text-lime-400">About Us</a>
+                    <a href="service.html" class="hover:text-lime-400">Services</a>
+
+                    <!-- CLASSES DROPDOWN -->
+                    <div class="relative group">
+                        <a href="#" class="flex items-center text-lime-400">
+                            Classes <span class="text-xs">▾</span>
+                        </a>
+                        <div class="absolute left-0 top-10 w-44 bg-[#0b1320] border border-gray-700 rounded-md
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+                            <a href="class.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                                classes
+                            </a>
+                            <a href="classdetailes.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                                classdetailes
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- TRAINERS DROPDOWN -->
+                    <div class="relative group">
+                        <a href="trainers.html" class="flex items-center gap-1 hover:text-lime-400">
+                            Trainers <span class="text-xs">▾</span>
+                        </a>
+                        <div class="absolute left-0 top-10 w-44 bg-[#0b1320] border border-gray-700 rounded-md
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+                            <a href="trainer.html"
+                                class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                               Our Trainers
+                            </a>
+                            <a href="/trainers/group.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                                Group Trainer
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- BLOG DROPDOWN -->
+                    <div class="relative group">
+                        <a href="/blog.html" class="flex items-center gap-1 hover:text-lime-400">
+                            Blog <span class="text-xs">▾</span>
+                        </a>
+                        <div class="absolute left-0 top-10 w-40 bg-[#0b1320] border border-gray-700 rounded-md
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+                            <a href="/blog/fitness.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                                Fitness
+                            </a>
+                            <a href="/blog/nutrition.html" class="block px-4 py-2 hover:bg-lime-400 hover:text-black">
+                                Nutrition
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="/contact.html" class="hover:text-lime-400">Contact</a>
+                </nav>
+
+                <!-- RIGHT ACTIONS -->
+                <div class="hidden lg:flex items-center gap-4">
+
+                    <!-- SEARCH -->
+                    <a href="/search.html" class="hover:text-lime-400">🔍</a>
+
+                    <!-- CART -->
+                    <a href="/cart.html" class="hover:text-lime-400">🛒</a>
+
+                    <!-- CTA -->
+                    <a href="/join.html"
+                        class="bg-lime-400 text-black px-5 py-2 text-sm font-semibold hover:bg-lime-300 transition">
+                        JOIN CLASS NOW
+                    </a>
+                </div>
+
+                <!-- MOBILE TOGGLE -->
+                <button id="menuBtn" class="lg:hidden text-2xl">
+                    ☰
+                </button>
+
+            </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-[#0b1320] border-t border-gray-700">
+            <nav class="flex flex-col p-6 gap-4 text-sm">
+
+                <a href="newtask.html" class="text-lime-400">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Services</a>
+
+                <!-- MOBILE DROPDOWNS (STACKED) -->
+                <details>
+                    <summary class="cursor-pointer">Classes</summary>
+                    <div class="ml-4 mt-2 flex flex-col gap-2">
+                        <a href="class.html">classes</a>
+                        <a href="classdetailes.html">classdetailes</a>
+
+                    </div>
+                </details>
+
+                <details>
+                    <summary class="cursor-pointer">Trainers</summary>
+                    <div class="ml-4 mt-2 flex flex-col gap-2">
+                        <a href="trainer.html">Our Trainers</a>
+                        <a href="/trainers/group.html">Detailes</a>
+                    </div>
+                </details>
+
+                <details>
+                    <summary class="cursor-pointer">Blog</summary>
+                    <div class="ml-4 mt-2 flex flex-col gap-2">
+                        <a href="/blog/fitness.html">Fitness</a>
+                        <a href="/blog/nutrition.html">Nutrition</a>
+                    </div>
+                </details>
+
+                <a href="/contact.html">Contact</a>
+                  <a href="search.html" class="hover:text-lime-400">🔍</a>
+
+                    <!-- CART -->
+                    <a href="cart.html" class="hover:text-lime-400">🛒</a>
+                <a href="/join.html" class="mt-4 bg-lime-400 text-black text-center py-2 font-semibold">
+                    JOIN CLASS NOW
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="relative h-[500px] flex items-center justify-center text-center text-white"
+            style="background-image:url('./images/herosection.png'); background-size:cover; background-position:center;">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-blue/70"></div>
+
+            <!-- Content -->
+            <div class="relative z-10 max-w-3xl px-6">
+                <h1 class="text-4xl lg:text-5xl font-extrabold">
+                    OUR <span class="text-lime-400">CLAS DETAILES</span>
+                </h1>
+
+                <p class="mt-4 text-sm text-white/70">
+                    Home - <span class="text-lime-400">Class Detailes</span>
+                </p>
+            </div>
+        </section>
+        <!-- MOVING STRIP -->
+        <div class="bg-lime-400 py-3 overflow-hidden">
+            <p class="animate-marquee whitespace-nowrap text-black text-sm font-semibold">
+                LIVE CLASSES + PERSONAL TRAINERS + OUTDOOR & ONLINE TRAINERS + PERSONAL TRAINING +
+                LIVE CLASSES + PERSONAL TRAINERS +
+            </p>
+        </div>
+        </section>
+
+        <section class="relative bg-[#0b1320] text-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 py-24">
+
+    <!-- TOP GRID -->
+    <div class="grid lg:grid-cols-2 gap-14 items-start">
+
+      <!-- LEFT IMAGE -->
+      <div
+        class="group relative rounded-2xl overflow-hidden border border-white/10
+               transition-all duration-500 hover:scale-[1.02] hover:border-lime-400/50
+               hover:shadow-[0_0_60px_rgba(190,242,100,0.15)]"
+      >
+        <img
+          src="./images/classd1.png"
+          alt="classd1 img"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div>
+        <h2 class="text-3xl lg:text-4xl font-extrabold mb-4">
+          Find Your Balance, Strength, and Serenity
+        </h2>
+
+        <p class="text-white/70 text-sm leading-relaxed mb-6">
+          Transform your mind and body through the art of yoga, guided by expert
+          instructors in a peaceful environment. Discover a wide range of classes
+          designed to enhance flexibility, strength, and inner calm.
+        </p>
+
+        <!-- BENEFITS -->
+        <h4 class="font-semibold mb-4">Embrace the Benefits of Yoga</h4>
+
+        <div class="grid sm:grid-cols-2 gap-3 text-sm text-white/80">
+          <div class="flex items-center gap-2">
+            <span class="text-lime-400">✔</span> Physical Health
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-lime-400">✔</span> Emotional Healing
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-lime-400">✔</span> Mental Well-Being
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-lime-400">✔</span> Improved Focus
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-lime-400">✔</span> Community Connection
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-lime-400">✔</span> Better Sleep Quality
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM GRID -->
+    <div class="grid lg:grid-cols-2 gap-14 items-center mt-20">
+
+      <!-- WHY CHOOSE -->
+      <div>
+        <h3 class="text-2xl font-bold mb-6">
+          Why Choose Our Yoga Classes?
+        </h3>
+
+        <div class="space-y-4 text-sm text-white/75">
+          <p>✔ Diverse styles for beginners to advanced practitioners</p>
+          <p>✔ Certified instructors with personalized guidance</p>
+          <p>✔ Holistic wellness approach for mind and body</p>
+          <p>✔ Supportive and welcoming community</p>
+        </div>
+
+        <!-- TESTIMONIAL -->
+        <div
+          class="mt-8 bg-white/5 border border-white/10 rounded-xl p-5
+                 hover:border-lime-400/40 transition"
+        >
+          <p class="text-sm italic text-white/80">
+            “Yoga has improved my posture and reduced stress levels.
+            It’s my sanctuary in a busy week.”
+          </p>
+          <p class="mt-3 text-sm font-semibold">
+            — Sarah L., Yoga Enthusiast
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT SMALL IMAGE -->
+      <div
+        class="group relative rounded-2xl overflow-hidden border border-white/10
+               transition-all duration-500 hover:scale-[1.03]
+               hover:shadow-[0_0_50px_rgba(190,242,100,0.2)]"
+      >
+        <img
+          src="./images/classd2.png"
+          alt="classd2 img"
+          class="w-full object-cover"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    </main>
+
+    <footer class="relative bg-[#0E1525] text-white">
+        <!-- Background overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#0E1525]/95 via-[#0E1525]/90 to-[#0E1525]/80"></div>
+
+        <div class="relative max-w-[1400px] mx-auto px-6 lg:px-20 py-20">
+            <div class="grid gap-12 lg:grid-cols-4 md:grid-cols-2">
+
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full border-2 border-lime-400 flex items-center justify-center">
+                            <img src="./images/logo.png" alt="logo img">
+                        </div>
+                        <h3 class="text-xl font-bold">STAYFIT</h3>
+                    </div>
+
+                    <p class="text-white/70 text-sm leading-relaxed mb-4">
+                        Push harder, go further. Your fitness journey starts today!
+                    </p>
+
+                    <div class="flex items-center gap-3">
+                        <input type="email" placeholder="Enter your email"
+                            class="bg-transparent border-b border-white/30 focus:border-lime-400 outline-none text-sm py-1 w-full" />
+                        <span class="text-lime-400 text-lg">→</span>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-semibold mb-5">CONTACT US</h4>
+
+                    <ul class="space-y-4 text-sm text-white/70">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-lime-400"></i>
+                            +91 123 456 789
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-lime-400"></i>
+                            stayfit@gmail.com
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- Timing -->
+                <div>
+                    <h4 class="font-semibold mb-5">OUR GYM TIMING</h4>
+
+                    <ul class="space-y-4 text-sm text-white/70">
+                        <li>
+                            <span class="block font-medium text-white">Mon - Fri</span>
+                            08:00 AM - 10:00 PM
+                        </li>
+                        <li>
+                            <span class="block font-medium text-white">Sat - Sun</span>
+                            08:00 AM - 09:00 PM
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Location & Social -->
+                <div>
+                    <h4 class="font-semibold mb-5">OUR LOCATION</h4>
+
+                    <p class="flex items-start gap-3 text-sm text-white/70">
+                        <i class="fa-solid fa-location-dot text-lime-400 mt-1"></i>
+                        123 Stayfit Street, Tokyo, Japan
+                    </p>
+
+
+                    <h4 class="font-semibold mb-4">FOLLOW US</h4>
+
+                    <div class="flex gap-5 text-white/70">
+                        <a href="#" class="hover:text-lime-400 transition">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                        </a>
+
+                        <a href="#" class="hover:text-lime-400 transition">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+
+                        <a href="#" class="hover:text-lime-400 transition">
+                            <i class="fa-brands fa-x-twitter text-lg"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-white/10 mt-16 pt-6 text-left text-sm text-white/50">
+                © 2025 All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="./src/min.js"></script>
+</body>
+
+</html>
